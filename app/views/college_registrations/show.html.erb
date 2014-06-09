@@ -1,0 +1,17 @@
+<p>
+  <strong>Name:</strong>
+  <%= @college_registration.name %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= @college_registration.email %>
+</p>
+<p>
+  <strong>College_name:</strong>
+  <%= @college_registration.college_information.name %>
+</p>
+<p>
+  <strong>Stream_name:</strong>
+  <%= Stream.find(@college_registration.stream_id).name %>
+</p>
+

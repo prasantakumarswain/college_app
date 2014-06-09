@@ -1,0 +1,21 @@
+<%=form_for @college_registration do |college| %>
+    <div class="field">
+      <%= college.label :name %>
+      <%= college.text_field :name %>
+    </div>
+    <div class="field">
+      <%= college.label :email %>
+      <%= college.text_field :email %>
+    </div>
+    <%= college.collection_select(:college_information_id, CollegeInformation.all, :id, :name,
+                                  {:include_blank => 'Please Select College Name'}) %>
+    <%=college.collection_select(:stream_id, Stream.all, :id, :name, {:include_blank => 'Please Select Stream Name'})%>
+    <%#= select_tag :college_information_id, options_for_select([["College Name",nil]]+
+                           CollegeInformation.all.collect {|college| [college.name, college.id]}) %>
+    <%#= select_tag :stream_id, options_for_select([["Stream Name",nil]]+
+                           Stream.all.collect {|stream| [stream.name, stream.id]}) %>
+
+    <div class="actions">
+      <%= college.submit "College Information" %>
+    </div>
+<%end %>

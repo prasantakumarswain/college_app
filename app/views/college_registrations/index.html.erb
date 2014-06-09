@@ -1,0 +1,19 @@
+<h1>College registration form</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>CollegeName</th>
+    <th>StreamName</th>
+  </tr>
+  <% @college_registrations.each do |college|%>
+      <tr>
+        <td><%= college.name %></td>
+        <td><%= college.email %></td>
+        <td><%= college.college_information.name %></td>
+        <td><%= college.stream.name %></td>
+      </tr>
+  <% end %>
+
+
+</table>

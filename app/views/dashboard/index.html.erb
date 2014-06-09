@@ -1,0 +1,6 @@
+<% if current_user.type == "Director" %>
+    <p><h3> Welcome To Director, <%= current_user.name %></h3></p>
+
+    <p>Click here to assign a Faculty for a Particular college:</p>
+    <p><b><%= link_to 'Assign faculty for College', new_faculty_path %></b></p>
+<% end %>
