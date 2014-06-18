@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :dashboard do
     collection do
       get :index
+      get :stream_index
+      get :assign_student
     end
   end
 
@@ -26,6 +28,11 @@ resources :college_registrations do
   end
 end
 
+  resources :sections do
+    collection do
+        get :index
+    end
+  end
   root 'users#index'
 
 

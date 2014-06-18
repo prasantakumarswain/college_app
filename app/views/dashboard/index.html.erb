@@ -2,5 +2,7 @@
     <p><h3> Welcome To Director, <%= current_user.name %></h3></p>
 
     <p>Click here to assign a Faculty for a Particular college:</p>
-    <p><b><%= link_to 'Assign faculty for College', new_faculty_path %></b></p>
+    <b><%= link_to 'Assign faculty for College', new_faculty_path %></b>
+    <b><%= link_to 'See College Application Requests',college_registrations_path %></b>
+    <b><%= link_to 'Assign a Student For Class',stream_index_dashboard_index_path%></b>
 <% end %>

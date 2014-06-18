@@ -1,0 +1,16 @@
+<h2>Assign a  student for a Section</h2>
+<table>
+  <tr>
+    <th>Stream</th>
+    <th>Section</th>
+  </tr>
+  <% Stream.all.each do |stream|%>
+      <tr>
+        <td><%= stream.name %></td>
+        <td><% stream.sections.each do |section| %>
+              <%=link_to section.name, assign_student_dashboard_index_path %><br>
+          <% end %>
+        </td>
+      </tr>
+  <% end %>
+</table>

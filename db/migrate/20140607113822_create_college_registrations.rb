@@ -3,8 +3,8 @@ class CreateCollegeRegistrations < ActiveRecord::Migration
     create_table :college_registrations do |t|
       t.string :name
       t.string :email
-      t.references :college_information_id
-      t.references :stream_id
+      t.references :college_information
+      t.references :stream
       t.timestamps
     end
   end

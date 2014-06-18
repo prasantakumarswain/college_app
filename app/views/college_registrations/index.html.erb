@@ -12,8 +12,10 @@
         <td><%= college.email %></td>
         <td><%= college.college_information.name %></td>
         <td><%= college.stream.name %></td>
+        <%# if college_information_id == current_user.id %>
+            <td><%=link_to "Accept",'#' %></td>
+            <td><%=link_to "Reject",'#' %></td>
+        <%# end %>
       </tr>
   <% end %>
-
-
 </table>
